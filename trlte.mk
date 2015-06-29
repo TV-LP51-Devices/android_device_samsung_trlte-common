@@ -203,6 +203,11 @@ PRODUCT_PACKAGES += \
 # Torch
 PRODUCT_PACKAGES += \
     Torch
+    
+# Speed up art
+PRODUCT_PROPERTY_OVERRIDES += \
+dalvik.vm.image-dex2oat-filter=everything \
+dalvik.vm.dex2oat-filter=everything
 
 PRODUCT_PACKAGES += \
     libnetcmdiface \
