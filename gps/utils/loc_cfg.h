@@ -37,15 +37,11 @@
 #define LOC_MAX_PARAM_STRING               80
 #define LOC_MAX_PARAM_LINE                 80
 
-#define UTIL_UPDATE_CONF(conf_data, len, config_table) \
-    loc_update_conf((conf_data), (len), (config_table), \
-                    sizeof(config_table) / sizeof(config_table[0]))
-
 #define UTIL_READ_CONF_DEFAULT(filename) \
     loc_read_conf((filename), NULL, 0);
 
 #define UTIL_READ_CONF(filename, config_table) \
-    loc_read_conf((filename), (config_table), sizeof(config_table) / sizeof(config_table[0]))
+            loc_read_conf((filename), (config_table), sizeof(config_table) / sizeof(config_table[0]))
 
 /*=============================================================================
  *
@@ -62,16 +58,6 @@ typedef struct
                                                  'f' for float */
 } loc_param_s_type;
 
-typedef struct
-{
-  char                           param_name[LOC_MAX_PARAM_STRING];
-  void                          *param_ptr;
-  uint8_t                       *param_set;   /* was this value set by config file? */
-  char                           param_type;  /* 'n' for number,
-                                                 's' for string,
-                                                 'f' for float */
-} loc_param_s_type2;
-
 /*=============================================================================
  *
  *                          MODULE EXTERNAL DATA
@@ -87,15 +73,10 @@ extern "C" {
  *                       MODULE EXPORTED FUNCTIONS
  *
  *============================================================================*/
-void loc_read_conf(const char* conf_file_name,
-                   loc_param_s_type* config_table,
-                   uint32_t table_length);
-int loc_read_conf_r(FILE *conf_fp, loc_param_s_type* config_table,
-                    uint32_t table_length);
-int loc_read_conf_r2(FILE *conf_fp, loc_param_s_type2* config_table, uint32_t table_length);
-
-int loc_update_conf(const char* conf_data, int32_t length,
-                    loc_param_s_type* config_table, uint32_t table_length);
+extern void loc_read_conf(const char* conf_file_name,
+                          loc_param_s_type* config_table,
+                          uint32_t table_length);
+extern int loc_read_conf_r(FILE *conf_fp, loc_param_s_type* config_table, uint32_t table_length);
 #ifdef __cplusplus
 }
 #endif
