@@ -48,4 +48,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
     
-	persis.art.pruneimagecache=false
+    persis.art.pruneimagecache=false
