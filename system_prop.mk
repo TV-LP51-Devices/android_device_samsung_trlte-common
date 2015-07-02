@@ -46,6 +46,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # USB OTG interface
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.isUsbOtgEnabled=true
-    
+    persist.sys.isUsbOtgEnabled=true \
     persis.art.pruneimagecache=false
