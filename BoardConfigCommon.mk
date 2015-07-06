@@ -81,6 +81,12 @@ PLATFORM_LINARO_4.9 := true
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
+# Validus optimizations
+SYMMETRY := true
+GRAPHITE_OPTS := true
+STRICT_ALIASING := true
+VALIDUS_CHANGELOG := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
