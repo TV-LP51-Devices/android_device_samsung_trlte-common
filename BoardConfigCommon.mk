@@ -74,7 +74,7 @@ TARGET_KERNEL_CONFIG := apq8084_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/trlte
 
-Rom Toolchain
+# Rom Toolchain
 PLATFORM_LINARO_4.9 := true
 
 # Custom Toolchain Flags
