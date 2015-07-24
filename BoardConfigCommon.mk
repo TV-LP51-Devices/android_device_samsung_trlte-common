@@ -75,17 +75,14 @@ TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/trlte
 
 # Rom Toolchain
-PLATFORM_LINARO_4.9 := true
+TARGET_GCC_VERSION_EXP := 4.9
 
 # Custom Toolchain Flags
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Validus optimizations
-SYMMETRY := true
-GRAPHITE_OPTS := true
-STRICT_ALIASING := true
-VALIDUS_CHANGELOG := true
+Pulse := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
